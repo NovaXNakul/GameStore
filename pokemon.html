@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Download Pokemon Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Redirect after 60 seconds to official store page -->
+  <meta http-equiv="refresh" content="60;url=https://pokemon-x.en.softonic.com/android/download" />
+  <style>
+    body {
+      background: linear-gradient(135deg,#0f1f3f 0%,#03203c 80%);
+      color: #eef5ff;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin:0;
+      text-align:center;
+      padding: 1rem;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 30px 24px;
+      max-width: 420px;
+      width:100%;
+      box-shadow: 0 25px 60px -10px rgba(29,185,84,0.4);
+    }
+    h1 {
+      margin-top:0;
+      font-size: clamp(1.8rem,2.5vw,2.8rem);
+    }
+    p {
+      font-size: 1rem;
+      line-height:1.4;
+      margin: .75rem 0 1.5rem;
+    }
+    .btn {
+      background: #1db954;
+      color: #111;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: filter .2s, transform .2s;
+    }
+    .btn:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+    }
+    .small {
+      font-size: .75rem;
+      opacity: .8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Preparing Download...</h1>
+    <p>You are being redirected to the official Pokemon page. If the redirect doesn't happen automatically, click the button below.</p>
+    <a class="btn" href="https://pokemon-x.en.softonic.com/android/download" target="_blank" rel="noopener">Go Now</a>
+    <p class="small">Redirecting in <span id="count">60</span> seconds.</p>
+  </div>
+
+  <script>
+    let counter = 60;
+    const span = document.getElementById('count');
+    const interval = setInterval(() => {
+      counter--;
+      if (counter <= 0) {
+        clearInterval(interval);
+      }
+      span.textContent = counter;
+    }, 1000);
+  </script>
+</body>
+</html>

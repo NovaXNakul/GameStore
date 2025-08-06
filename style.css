@@ -1,0 +1,162 @@
+.navbar-brand{
+    font-size: 1.5em;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+.fw, .navbar-brand img, .navbar-brand svg {
+    transition: transform 0.3s ease-in-out;
+}
+
+.fw:hover, .navbar-brand img:hover, .navbar-brand svg:hover {
+    transform: scale(1.25);
+}
+.row{
+    display:flex;
+}
+
+.d-inline{
+    border-radius: 50%; /* This makes the image round */
+  
+}
+.row {
+    margin-bottom: 30px; /* Adjust the value to increase or decrease the gap */
+}
+
+
+.col-lg-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fw{
+    border-radius:50%;
+}
+
+.btn btn-secondary{
+    background-color: #f8f9fa;
+    color: black;
+    border: 1px solid black;
+}
+
+.homegame{
+    border-radius: 15%; 
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+.navbar {
+    background-color: #0a0f0d !important;
+}
+.navbar-brand, .nav-link {
+    color: #1db954 !important;
+    transition: 0.3s;
+}
+.nav-link:hover {
+    color: #ffffff !important;
+}
+.btn-green {
+    background-color: #1db954;
+    color: black;
+    border: none;
+    transition: 0.3s;
+}
+.btn-green:hover {
+    background-color: #17a347;
+    color: white;
+}
+.feature-box {
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.feature-box:hover {
+    transform: scale(1.05);
+}
+.dark-slash {
+    color: #1db954;
+    font-size: 2rem;
+}
+.toggle-dark {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background-color: #1db954;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.toggle-dark:hover {
+    background-color: #17a347;
+}
+
+.thrilling-content{
+    background-color: green;
+    color: white; /* Optional: Ensures text is visible */
+    padding: 20px; /* Optional: Adds spacing inside */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+.why{
+    display: flex;
+    justify-content: center;
+}
+
+/* Container for centering the cubes and the text */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between cubes and text */
+    position: relative;
+}
+
+/* Cube Wrapper - Applying 3D perspective */
+.cube-container {
+    width: 60px;
+    height: 60px;
+    perspective: 600px; /* Adds the perspective for 3D effect */
+    position: relative;
+}
+
+/* Cube itself with 3D transformation */
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(30deg) rotateY(45deg); /* Adjust initial cube orientation */
+    animation: spin 5s infinite linear;
+}
+
+/* Cube Faces */
+.face {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid white;
+}
+
+/* Position each face of the cube */
+.front  { transform: translateZ(30px); background-color: yellowgreen;}
+.back   { transform: rotateY(180deg) translateZ(30px); background-color:yellowgreen}
+.right  { transform: rotateY(90deg) translateZ(30px); background-color: gainsboro}
+.left   { transform: rotateY(-90deg) translateZ(30px); background-color:gainsboro}
+.top    { transform: rotateX(90deg) translateZ(30px); background-color: violet; }
+.bottom { transform: rotateX(-90deg) translateZ(30px); background-color: violet }
+
+/* Cube Rotation Animation */
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
